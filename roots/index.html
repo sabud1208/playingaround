@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello JQuery UI World</title>
+    <script type="text/javascript">
+</script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script src= "https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src= "js/jquery-ui.min.js"></script>
+  <script>
+  $(function(){
+    $('a').button();
+    $('input').datepicker();
+    $('#dialog').dialog({
+      width: 500,
+      title: 'hey',
+      open: function(){
+        $('body').css({background:"#333333"});
+      },
+      close: function(){
+        $('body').css({background: "#123456"})
+      }
+    });
+    $('#dialog').on('dialogdrag', onDialogDrag);
+    function onDialogDrag(evt, ui){
+        $('body').css({background: "#223256"})
+    }
+  })
+</script>
+  <body>
+    <a href="">Courses</a>
+    <a href="">Books</a>
+    <script src = "script.js"></script>
+    <br/>
+  </br/>
+  Select a date: <input type= 'text' id="datePicker" />
+
+  <div id= "dialog">
+    <h1>Welcome to our Site</h1>
+
+  </div>
+  </body>
+</html>
